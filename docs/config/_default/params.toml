@@ -1,0 +1,88 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customise the display of your website.
+#
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/configuration/#theme-parameters
+
+colorScheme = "congo"
+defaultAppearance = "dark" # valid options: light or dark
+autoSwitchAppearance = false # false
+
+defaultThemeColor = "#FFFFFF"
+
+enableSearch = true
+enableCodeCopy = true
+enableImageLazyLoading = true
+enableImageWebp = true
+
+# robots = ""
+fingerprintAlgorithm = "sha256"
+
+[header]
+  layout = "hybrid" # valid options: basic, hamburger, hybrid, custom
+  logo = "img/logo-64.png"
+  logoDark = "img/logo-64.png"
+  showTitle = true
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
+  showScrollToTop = true
+
+[homepage]
+  layout = "page" # valid options: page, profile, custom
+  showRecent = false # true
+  recentLimit = 5
+
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = true
+  showBreadcrumbs = false
+  showDraftLabel = true
+  showEdit = false
+  # editURL = "https://github.com/username/repo/"
+  editAppendPath = true
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = false
+  showTaxonomies = false
+  showWordCount = false
+  showComments = false
+  # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo"]
+
+[list]
+  showBreadcrumbs = true
+  showSummary = true
+  showTableOfContents = true
+  showTaxonomies = false
+  groupByYear = false
+  paginationWidth = 1
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
+
+[fathomAnalytics]
+  # site = "ABC12345"
+
+[plausibleAnalytics]
+  # domain = "blog.yoursite.com"
+  # event = ""
+  # script = ""
+
+#[umamiAnalytics]
+#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#  region = "eu"  # can be either "eu" or "us"
+
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""

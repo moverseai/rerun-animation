@@ -1,0 +1,88 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+#
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "Documentation"
+  pageRef = "docs"
+  weight = 10
+
+# [[main]]
+  # name = "Categories"
+  # pageRef = "categories"
+  # weight = 20
+
+# [[main]]
+  # name = "Tags"
+  # pageRef = "tags"
+  # weight = 30
+
+[[main]]
+  name = "GitHub"
+  url = "https://www.github.com/moverseai/rerun-animation"
+  weight = 80
+  [main.params]
+    icon = "github"
+    showName = false
+    target = "_blank"
+
+[[main]]
+  identifier = "search"
+  weight = 98
+  [main.params]
+    action = "search"
+
+# [[main]]
+  # identifier = "Theme"
+  # weight = 99
+  # [main.params]
+    # action = "appearance"
+    # icon = "lightbulb"
+
+# [[main]]
+  # identifier = "locale"
+  # weight = 100
+  # [main.params]
+    # action = "locale"
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+# [[footer]]
+  # name = "Privacy"
+  # pageRef = "privacy"
+  # name = "Tags"
+  # pageRef = "tags"
+  # weight = 10
+
+[[footer]]
+  name = "Docs"
+  pageRef = "docs"
+  weight = 20
+
+[[footer]]
+  name = "Rerun"
+  pageRef = "rerun"
+  weight = 30
+  # pre = "<img src=\"\" style=\"display: inline;\"/>"
+  url = "https://www.rerun.io"
+  # [footer.params]
+    # icon = "github"
+    # showName = false
+    # target = "_blank"
+
+[[footer]]
+  name = "Supported by EMIL-XR"
+  pageRef = "emil"
+   # post = "<img src=img/.png />"
+  url = "https://www.emil-xr.eu"
+  weight = 40

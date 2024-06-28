@@ -1,0 +1,14 @@
+# config/_default/languages.en.toml
+
+title = "rerun-animation"
+
+[params.author]
+name = "Moverse"
+image = "img/moverse_new_logo_trademark_white.png"
+headline = "A headline ..."
+bio = "..."
+links = [
+  { twitter = "https://twitter.com/moverseai" }
+]
+
+copyright = "Moverse P.C."
