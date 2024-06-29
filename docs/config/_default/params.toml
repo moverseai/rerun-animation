@@ -38,22 +38,23 @@ fingerprintAlgorithm = "sha256"
 
 [article]
   showDate = true
-  showDateUpdated = false
+  showDateUpdated = true
   showAuthor = true
-  showBreadcrumbs = false
+  showBreadcrumbs = true
   showDraftLabel = true
-  showEdit = false
-  # editURL = "https://github.com/username/repo/"
-  editAppendPath = true
+  showEdit = true
+  editURL = "https://github.com/moverseai/rerun-animation/"
+  editAppendPath = false
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = false
+  showTableOfContents = true
   showTaxonomies = false
-  showWordCount = false
+  showWordCount = true
   showComments = false
-  # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo"]
+  sharingLinks = ["x-twitter", "linkedin", "email"]
+  # ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo"]
 
 [list]
   showBreadcrumbs = true
@@ -61,7 +62,7 @@ fingerprintAlgorithm = "sha256"
   showTableOfContents = true
   showTaxonomies = false
   groupByYear = false
-  paginationWidth = 1
+  paginationWidth = 20
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
@@ -77,7 +78,7 @@ fingerprintAlgorithm = "sha256"
   # event = ""
   # script = ""
 
-#[umamiAnalytics]
+[umamiAnalytics]
 #  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 #  region = "eu"  # can be either "eu" or "us"
 

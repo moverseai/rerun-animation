@@ -10,7 +10,7 @@ cascade:
 ---
 
 {{< lead >}}
-Flexible 3D animation visualization.\
+Flexible 3D animation data visualization.\
 Learn how to use `rerun-animation` and its features.
 {{< /lead >}}
 

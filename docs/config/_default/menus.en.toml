@@ -83,6 +83,6 @@
 [[footer]]
   name = "Supported by EMIL-XR"
   pageRef = "emil"
-   # post = "<img src=img/.png />"
+  # pre = "<img alt=EMIL-XR src=./images/logo-emil-xr.png width=16 height=16 style=display:inline-block;/></p></a>"
   url = "https://www.emil-xr.eu"
   weight = 40

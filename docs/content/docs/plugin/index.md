@@ -1,7 +1,8 @@
 ---
-title: "Using the rerun-loader-plugin"
-description: "Drag-n-drop interface for rerun."
-date: 2024-01-02 # used for ordering, most recent == first
+title: "Plugin"
+description: "Drag-n-drop interface for the rerun-sdk viewer."
+date: 2024-01-01 # used for ordering, most recent == first
+layout: simple
 
 cascade:
   showDate: false
@@ -11,7 +12,7 @@ cascade:
 ---
 
 {{< lead >}}
-Drag-n-drop interface for rerun.
+Drag-n-drop interface for the `rerun-sdk` viewer.
 {{< /lead >}}
 
 ![Screenshots](screenshot.png)

@@ -1,7 +1,8 @@
 ---
-title: "Command Line Tools"
+title: "Command Line Interface"
 description: "Learn how to use the rerun-animation tools."
-date: 2024-01-01 # used for ordering, most recent == first
+date: 2024-01-02 # used for ordering, most recent == first
+layout: simple
 
 cascade:
   showDate: false
@@ -11,7 +12,7 @@ cascade:
 ---
 
 {{< lead >}}
-Learn how to use the rerun-animation tools.
+Learn how to use the `rerun-animation` tools.
 {{< /lead >}}
 
 ![Screenshots](screenshot.svg)

@@ -27,3 +27,7 @@ enableCodeCopy = true
 
 [footer]
   showThemeAttribution = false
+
+
+[article]
+  showTableOfContents = true
