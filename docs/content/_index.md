@@ -1,11 +1,11 @@
 ---
 title: "rerun-animation :loop:" # :running: :runner: :running_woman: :nut_and_bolt: :moyai: :infinity: :wavy_dash: :curly_loop: :loop:
 # https://gohugo.io/quick-reference/emojis/
-description: "This is a Rerun plugin and toolset for 3D animation data."
+description: "A python package that offers a rerun-sdk plugin and toolset to visualize 3D animation data."
 ---
 
 {{< lead >}}
-A Rerun plugin & toolset for 3D animation data.
+A `rerun-sdk` plugin & toolset to visualize 3D animation data.
 {{< /lead >}}
 
 <!-- TODO(badges)
@@ -33,18 +33,20 @@ For more information, see [Why this project?]()
 
 {{< alert >}}
 **Warning!** The plugin is still in alpha but its functionality is not expected to change as it depends on `rerun-sdk` plugin system changes. 
-Also, compatibility with specific `rerun-sdk` versions might be necessary because of this. However, through the `rerun-animation` package it is possible to support more advanced configurations and tools. Once these have been stabilized and most bugs have been identified and solved, we will bump `rerun-animation` to a stable release.
+Also, compatibility with specific `rerun-sdk` versions might be necessary because of this. 
+Apart from integrating with `rerun-sdk` via the loader plugin, the `rerun-animation` package offers an additional configuration layer and extra tools. 
+Once these have been stabilized and most bugs have been identified and solved, we will bump `rerun-animation` to a stable release.
 {{< /alert >}}
 
 ## Features
 
-Through the `rerun-animation` package users can:
-- `install` a plugin for `3D animation` files drag-n-drop
-- `execute` commands to log `3D animation` data to [`rerun`](https://www.rerun.io)
+With the `rerun-animation` {{< icon "python" >}} package users can:
+- `install` a [rerun-loader-plugin](https://rerun.io/blog/data-loaders) to drag-n-drop  `3D animation` files in the [`rerun-viewer`](https://rerun.io/docs/reference/viewer/overview).
+- `execute` commands to log `3D animation` data to a [`rerun`](https://www.rerun.io) instance.
 
 `rerun-animation`  supports the following types of `3D animation` data:
 1. Biovision Hierarchy files (`*.bvh`)
-2. <a style="display: inline;" href="https://meshcapade.com/"><img src="https://meshcapade.com/images/meshcapade_logo_white.svg" width=120 style="display: inline;vertical-align:middle;horizontal-align:top;margin:0px 0px 5px 0px"></a> Parametric Human Body files (`*.npz`)
+2. Parametric Human Body parameter files (`*.npz`) from <a style="display: inline;" href="https://meshcapade.com/"><img src="https://meshcapade.com/images/meshcapade_logo_white.svg" width=120 style="display: inline;vertical-align:middle;horizontal-align:top;margin:0px 0px 5px 0px"></a> 
 
 <!--
 <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
