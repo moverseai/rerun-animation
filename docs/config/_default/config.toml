@@ -4,7 +4,7 @@
 
 # theme = "congo"
 
-# baseURL = "https://your_domain.com/"
+baseURL = "https://moverseai.github.io/rerun-animation"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
