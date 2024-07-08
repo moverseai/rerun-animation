@@ -13,6 +13,8 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env: 
+      HUGO_VERSION: “0.127.0"
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -29,7 +31,8 @@ jobs:
           extended: true
 
       - name: Build
-        run: cd docs | hugo --minify
+        working-directory: ./docs
+        run: hugo --minify --gc --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
