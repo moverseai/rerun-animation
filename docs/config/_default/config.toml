@@ -6,6 +6,7 @@
 
 baseURL = "https://moverseai.github.io/rerun-animation"
 defaultContentLanguage = "en"
+relativeURLs = true
 
 enableRobotsTXT = true
 paginate = 10
