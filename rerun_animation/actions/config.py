@@ -53,7 +53,7 @@ def run():
         abspath = str(pkg_file.locate())
         if abspath.endswith(main_filename):
             break    
-    pkg_path = os.path.dirname(os.path.dirname(abspath))
+    pkg_path = os.path.dirname(abspath)
     configs_path = os.path.join(pkg_path, "configs")
     match args.action:
         case "list":

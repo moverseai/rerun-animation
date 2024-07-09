@@ -8,6 +8,7 @@ import os
 import re
 import io
 import logging
+import platform
 
 from setuptools import (
     setup,
@@ -29,20 +30,23 @@ def get_readme():
 
 def get_requirements():
     base_dir = os.path.abspath(os.path.dirname(__file__))
+    requirements = []
     with open(os.path.join(base_dir, "requirements.txt"), encoding="utf-8") as f:
-        return [line.strip() for line in f.readlines()]
-
+        requirements.extend(line.strip() for line in f.readlines())
+    if platform.system() == 'Windows':
+        requirements.append('pyinstaller==5.1')
+    return requirements
 
 PACKAGE_NAME = 'rerun-animation'
 VERSION = '0.0.1'
 AUTHOR = 'Moverse P.C.'
 EMAIL = 'info@moverse.ai'
 LICENSE = 'Apache 2.0'
-URL = ''
-CODE_URL = ''
-DOCS_URL = ''
+URL = 'https://moverseai.github.io/rerun-animation/'
+CODE_URL = 'https://github.com/moverseai/rerun-animation/'
+DOCS_URL = 'https://moverseai.github.io/rerun-animation/'
 DESCRIPTION = ''
-KEYWORDS = ''
+KEYWORDS = ['rerun-sdk', 'animation', 'plugin', 'visualization', '3d-animation','3d-visualization', 'bvh', 'smpl', 'smplh', 'biovision-hierarchy']
 
 if __name__ == '__main__':
     logger.info(f"Installing {PACKAGE_NAME} (v{VERSION}) ...")
@@ -66,7 +70,7 @@ if __name__ == '__main__':
         include_package_data=True,
         python_requires='~=3.10',
         package_dir={'rerun_animation': 'rerun_animation'},
-        package_data={'rerun_animation': ['configs/**/*.ini']},
+        package_data={'rerun_animation': ['configs/*.ini']},
         entry_points={
             'console_scripts': [
                 'rerun-animation=rerun_animation.actions.app:run',
