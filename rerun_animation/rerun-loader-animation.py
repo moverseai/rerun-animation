@@ -42,6 +42,7 @@ class Mode(Enum):
 def log_bvh(filename: str, entity_path: str, config) -> None:
     root_position, euler, offsets, parents, joint_names, order, timestep = \
         load_bvh(filename)
+    #TODO: add config scale param?
     T, J, C = euler.shape
     local_rotations = euler_angles_to_matrix(np.deg2rad(euler), order.upper())
     joint_positions, global_rotations = forward_kinematics(local_rotations, root_position, offsets, parents)
