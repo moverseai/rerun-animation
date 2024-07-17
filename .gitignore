@@ -171,3 +171,10 @@ public/
 jsconfig.json
 node_modules/
 .hugo_build.lock
+
+## Assets
+*.npz
+*.dll
+*.exe
+*.ini
+!rerun-animation/configs/*.ini

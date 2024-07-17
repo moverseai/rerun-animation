@@ -53,8 +53,8 @@ def run():
         abspath = str(pkg_file.locate())
         if abspath.endswith(main_filename):
             break    
-    pkg_path = os.path.dirname(abspath)
-    configs_path = os.path.join(pkg_path, "configs")
+    pkg_path = os.path.dirname(os.path.dirname(abspath))
+    configs_path = os.path.join(os.path.dirname(abspath), "configs")
     match args.action:
         case "list":
             installed = glob.glob(os.path.join(configs_path, "**", "*.ini"), recursive=True)
@@ -88,7 +88,7 @@ def run():
                 empty_lines_in_values=False,
                 # defaults=Constants.CONFIGURATION_DEFAULTS,
                 interpolation=configparser.ExtendedInterpolation())
-            config.read(Constants.CONFIG_FILENAME)
+            config.read(Constants.CURRENT_CONFIG_FILENAME)
             pprint({section: dict(config[section]) for section in config}, expand_all=True)
         case "select":            
             names = [os.path.splitext(os.path.basename(fp))[0] for fp in glob.glob(os.path.join(configs_path, "*.ini"))]
