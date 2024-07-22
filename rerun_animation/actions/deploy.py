@@ -52,7 +52,7 @@ def run():
         filename = os.path.basename(abspath)
         dirname = os.path.basename(os.path.dirname(abspath))
         if 'rerun_animation' == dirname and filename == '__init__.py':
-            pkg_path = os.path.dirname(os.path.dirname(abspath))
+            pkg_path = os.path.dirname(abspath)
             break    
     if (uses_external := args.deploy_path):
         out_folder = args.deploy_path
