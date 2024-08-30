@@ -178,3 +178,4 @@ node_modules/
 *.exe
 *.ini
 !rerun-animation/configs/*.ini
+bin/

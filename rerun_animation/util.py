@@ -15,8 +15,9 @@ __all__ = [
 ]
 
 class Constants():
+    BINARY_DIRECTORY_NAME : str = 'bin'
     CURRENT_CONFIG_FILENAME : str = 'rerun-animation.ini'
-    DEFAULTS_CONFIG_FILENAME : str = 'defaults.ini'
+    DEFAULT_CONFIG_FILENAME : str = 'default.ini'
     TEMPLATE_CONFIG_FILENAME : str = "template.ini"
     CONFIGURATION_DEFAULTS : typing.Dict[str, str] = {
         # viewer
@@ -42,7 +43,8 @@ class Constants():
 def setup_rerun_logging() -> None:
     handler = rr.LoggingHandler("rerun-animation")    
     logging.getLogger().addHandler(handler)    
-    logging.getLogger().setLevel(logging.INFO)
+    logging.getLogger().setLevel(os.getenv('RERUN_ANIMATION_LOG_LEVEL', 'INFO').upper())
+    return logging.getLogger()
 
 def set_time_from_args(args: typing.Mapping[str, typing.Any]) -> None:
     if not args.timeless and args.time is not None:
@@ -66,15 +68,26 @@ def flatten_globs(filepaths: typing.Sequence[str]) -> typing.List[str]:
         all_filepaths.extend(glob.glob(filepath))
     return all_filepaths
 
-def get_package_path() -> str:
+def get_package_path() -> typing.Tuple[str, bool]:
     pkg = Distribution.from_name("rerun_animation")
+    is_windows = False
     if platform.system() == 'Windows':
         main_filename = "rerun-loader-animation.py" # "rerun-loader-animation.exe"
+        is_windows = True
     else:
         main_filename = "rerun-loader-animation.py"
+    main_abspath = None
+    is_editable = True
     for pkg_file in pkg.files:
         abspath = str(pkg_file.locate())
         if abspath.endswith(main_filename):
-            break    
-    pkg_path = os.path.dirname(os.path.dirname(abspath))
-    return pkg_path
+            main_abspath = abspath 
+            # break    
+        if abspath.endswith("RECORD"):
+            is_editable = False
+    if not main_filename:
+        raise RuntimeError("The rerun-animation installation is corrupt, please re-install.")
+    pkg_path = os.path.dirname(main_abspath)
+    if not is_editable:
+        pkg_path = os.path.join(os.path.dirname(pkg_path), "rerun_animation")
+    return pkg_path, is_editable, is_windows

@@ -53,11 +53,11 @@ and place them under a common folder `PATH/TO/BODY/MODELS`.
 
 Then, run:
 ```bash
-rerun-animation-deploy `PATH/TO/BODY/MODELS`
+rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`
 ```
 
 <div id="termynal" data-termynal data-ty-startDelay="600">
-    <span data-ty="input" data-ty-prompt="~">rerun-animation-deploy `PATH/TO/BODY/MODELS`</span>
+    <span data-ty="input" data-ty-prompt="~">rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`</span>
     <span data-ty data-ty-delay="250" data-ty-cursor="▋">⚙    Preparing files from `PATH/TO/BODY/MODELS` ...</span>
     <span data-ty data-ty-delay="250" data-ty-cursor="▋"> 🟠    Processing `FILENAME1` ...</span>
     <span data-ty data-ty-delay="250" data-ty-cursor="▋"> 🟢    Done. Saving to ...</span>

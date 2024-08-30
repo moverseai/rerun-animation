@@ -204,11 +204,15 @@ def main() -> None:
     if not all(valid_filepaths.values()):
         sys.exit(rr.EXTERNAL_DATA_LOADER_INCOMPATIBLE_EXIT_CODE)
     
-    setup_rerun_logging()
+    log = setup_rerun_logging()
+    
+    data_root = os.environ.get('RERUN_ANIMATION_PLUGIN_DATA', './bin')
+    config_filename = os.path.join(data_root, Constants.CURRENT_CONFIG_FILENAME)
 
-    config_filename = Constants.CURRENT_CONFIG_FILENAME
     if not os.path.exists(config_filename):
+        log.error(f"Could not find current config: {config_filename}.")
         sys.exit(-1)
+
     config = configparser.ConfigParser(
         inline_comment_prefixes=('#',),
         empty_lines_in_values=False,
@@ -242,7 +246,6 @@ def main() -> None:
             else:
                 entity_path = filename
         
-            data_root = os.environ.get('RERUN_ANIM_PLUGIN_DATA', '.')            
             match up_axis := config.get('rerun', 'up_axis', fallback='y'):
                 case 'y':
                     coord_system = rr.ViewCoordinates.RIGHT_HAND_Y_UP
