@@ -102,7 +102,7 @@ def run():
                 inline_comment_prefixes=('#',),
                 empty_lines_in_values=False,
                 interpolation=configparser.ExtendedInterpolation())
-            config.read(Constants.DEFAULT_CONFIG_FILENAME)
+            config.read(os.path.join(pkg_path, 'configs', Constants.DEFAULT_CONFIG_FILENAME))
             new_filepath = os.path.join(filedir, f"{name}.ini")
             with open(new_filepath, 'w') as f:
                 config.write(f)

@@ -38,7 +38,7 @@ def get_requirements():
     return requirements
 
 PACKAGE_NAME = 'rerun-animation'
-VERSION = '0.0.4'
+VERSION = '0.0.5'
 AUTHOR = 'Moverse P.C.'
 EMAIL = 'info@moverse.ai'
 LICENSE = 'Apache 2.0'
