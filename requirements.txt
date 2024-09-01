@@ -2,5 +2,5 @@ trimesh>=4.0.5
 numpy
 rich>=10.16.1
 colour==0.1.5
-rerun-sdk==0.15.1
+rerun-sdk>=0.18.0
 importlib-metadata>=7.1.0

@@ -86,7 +86,7 @@ def run():
         else:
             data_file = data_files[0]
 
-            log.info(f"\t:orange_circle:\tProcessing [italic]{data_file}[/] ...")
+            log.info(f"\t:orange_circle:Processing [italic]{data_file}[/] ...")
             with open(data_file, 'rb') as f:
                 body_data = pickle.load(f, encoding='latin1')
             shape_blendshapes = np.ascontiguousarray(np.array(body_data['shapedirs']).astype(np.float32))
@@ -106,7 +106,7 @@ def run():
                 faces=faces, parents=parents, normals=mesh.vertex_normals,
             )
             log.info(f"\t:green_circle:Done.")
-            log.debug(f"\t\tSaved @ [italic]{output_filename}[/] ...")
+            log.debug(f"\tSaved @ [italic]{output_filename}[/] ...")
 
             if uses_external:
                 log.info(f"\t:warning:[bold yellow blink]Creating symlink to[/] [italic]{output_filename}[/] ...")
@@ -149,7 +149,7 @@ def run():
                 faces=faces, parents=parents, normals=mesh.vertex_normals,
             )
             log.info(f"\t:green_circle:Done.")
-            log.debug(f"Saved @ [italic]{output_filename}[/] ...")
+            log.debug(f"\tSaved @ [italic]{output_filename}[/] ...")
 
             if uses_external:
                 log.info(f"\t:warning:Creating symlink to [italic]{output_filename}[/] ...")

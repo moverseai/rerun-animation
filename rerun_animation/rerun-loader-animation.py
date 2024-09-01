@@ -51,10 +51,13 @@ def log_bvh(filename: str, entity_path: str, config) -> None:
     color = colour.Color(color_key).get_rgb() + (0.5,)
 
     rr.log("/", rr.AnnotationContext(rr.ClassDescription(
-        info=rr.AnnotationInfo(id=0, label=entity_path, color=color),
-        keypoint_annotations=[rr.AnnotationInfo(id=id, label=j) for id, j in enumerate(joint_names)],
+        #NOTE: until the issue w/ the labels taking up all space is resolved, we will not be logging them
+        # info=rr.AnnotationInfo(id=0, label=entity_path, color=color),
+        # keypoint_annotations=[rr.AnnotationInfo(id=id, label=j) for id, j in enumerate(joint_names)],
+        info=rr.AnnotationInfo(id=0, label=None, color=color),
+        keypoint_annotations=[rr.AnnotationInfo(id=id, label=None) for id, j in enumerate(joint_names)],
         keypoint_connections=list(filter(lambda t: t[1] > 0, enumerate(parents))),
-    )), timeless=True)    
+    )), static=True)    
     
     if show_rotations := config.getboolean('bvh.options', 'show_rotations', fallback=False):
         axii_colors = np.array([[255, 0, 0], [0, 255, 0], [0, 0, 255]])
@@ -133,10 +136,13 @@ def log_smpl_body(data_root: str, filepath: str, entity_path: str, config) -> No
     skeleton_color = colour.Color(skeleton_color_key).get_rgb() + (0.5,)
 
     rr.log("/", rr.AnnotationContext(rr.ClassDescription(
-        info=rr.AnnotationInfo(id=0, label=entity_path, color=skeleton_color),
-        keypoint_annotations=[rr.AnnotationInfo(id=id, label=j) for id, j in enumerate(SMPL_JOINT_NAMES)],
+        #NOTE: until the issue w/ the labels taking up all space is resolved, we will not be logging them
+        # info=rr.AnnotationInfo(id=0, label=entity_path, color=skeleton_color),
+        # keypoint_annotations=[rr.AnnotationInfo(id=id, label=j) for id, j in enumerate(SMPL_JOINT_NAMES)],
+        info=rr.AnnotationInfo(id=0, label=None, color=skeleton_color),        
+        keypoint_annotations=[rr.AnnotationInfo(id=id, label=None) for id, j in enumerate(SMPL_JOINT_NAMES)],
         keypoint_connections=list(filter(lambda t: t[1] > 0, enumerate(parents))),
-    )), timeless=True) 
+    )), static=True) 
 
     if mesh_color_key := config.get(f'{body_type}.options', 'color', fallback=None):
         mesh_color = colour.Color(mesh_color_key).get_rgb() + (0.5,)
@@ -161,8 +167,8 @@ def log_smpl_body(data_root: str, filepath: str, entity_path: str, config) -> No
                class_ids=0, keypoint_ids=range(max(posed_joints.shape))))
         rr.log(f"/{entity_path}/mesh", rr.Mesh3D(
             vertex_positions=posed_vertices + translation[i], 
-            indices=faces, vertex_normals=posed_normals,
-            mesh_material=rr.Material(mesh_color)
+            triangle_indices=faces, vertex_normals=posed_normals,
+            albedo_factor=rr.AlbedoFactor(mesh_color)
         ))
 
 def get_args() -> None:
@@ -251,7 +257,7 @@ def main() -> None:
                     coord_system = rr.ViewCoordinates.RIGHT_HAND_Y_UP
                 case 'z':
                     coord_system = rr.ViewCoordinates.RIGHT_HAND_Z_UP
-            rr.log("/", coord_system, timeless=True)
+            rr.log("/", coord_system, static=True)
 
             match mode:
                 case Mode.BVH:
