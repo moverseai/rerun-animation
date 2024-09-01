@@ -32,7 +32,7 @@ For more information, see [Why this project?]()
 -->
 
 {{< alert >}}
-**Warning!** The plugin is still in alpha but its functionality is not expected to change as it depends on `rerun-sdk` plugin system changes. 
+**Warning!** The plugin is now in beta but its functionality is not expected to change as it depends on `rerun-sdk` plugin system changes. 
 Compatibility with specific `rerun-sdk` versions might be necessary because of this. 
 Apart from integrating with `rerun-sdk` via the loader plugin, the `rerun-animation` package offers an additional configuration layer and extra tools. 
 Once these have been stabilized and most bugs have been identified and solved, we will bump `rerun-animation` to a stable release.

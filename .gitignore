@@ -177,5 +177,5 @@ node_modules/
 *.dll
 *.exe
 *.ini
-!rerun-animation/configs/*.ini
+!rerun_animation/configs/*.ini
 bin/

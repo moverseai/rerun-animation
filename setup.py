@@ -38,7 +38,7 @@ def get_requirements():
     return requirements
 
 PACKAGE_NAME = 'rerun-animation'
-VERSION = '0.0.6'
+VERSION = '0.0.7'
 AUTHOR = 'Moverse P.C.'
 EMAIL = 'info@moverse.ai'
 LICENSE = 'Apache 2.0'
@@ -80,7 +80,7 @@ if __name__ == '__main__':
             ],
         },
         classifiers=[
-            "Development Status :: 3 - Alpha",
+            "Development Status :: 4 - Beta",
             "Intended Audience :: Developers",
             "Intended Audience :: Science/Research",
             "Programming Language :: Python :: 3.10",
