@@ -11,9 +11,9 @@
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation/month)](https://pepy.tech/project/rerun-animation) -->
 
 
-> ➿`rerun-animation` turns the <a style="display: inline;" href="https://www.rerun.io"><img src="https://rerun.io/logo.svg/" width=72 style="display: inline;"></a> viewer to a `3D animation` viewer.
+> ➿`rerun-animation` turns the [rerun-sdk](https://www.rerun.io) viewer to a `3D animation` viewer.
 
-![intro](docs/assets/gif/rerun_animation_amass_multi.gif)
+![intro](https://github.com/moverseai/rerun-animation/raw/main/docs/assets/gif/rerun_animation_amass_multi.gif)
 
 ## Features
 
@@ -61,7 +61,7 @@ rerun-animation
 ```
 3. Drag-n-drop a `*.bvh` or `*.npz` file
 
-![quick-start](docs/assets/gif/rerun_animation_quick_start.gif)
+![quick-start](https://github.com/moverseai/rerun-animation/raw/main/docs/assets/gif/rerun_animation_quick_start.gif)
 
 ## Get Involved
 
