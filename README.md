@@ -10,6 +10,10 @@
 [![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ace5cb2d5105429da91010170445d4c6)](https://app.codacy.com/gh/moverseai/rerun-animation/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/moverseai/rerun-animation/badge)](https://www.codefactor.io/repository/github/moverseai/rerun-animation)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+___
+
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation/month)](https://pepy.tech/project/rerun-animation) -->
 
 
@@ -17,7 +21,7 @@
 
 ![intro](https://github.com/moverseai/rerun-animation/raw/main/docs/assets/gif/rerun_animation_amass_multi.gif)
 
-## Features
+## 📦 Features
 
 With the `rerun-animation` ➿ package users can:
 - `install` a [rerun-loader-plugin](https://rerun.io/blog/data-loaders) to drag-n-drop  `3D animation` files in the [`rerun-viewer`](https://rerun.io/docs/reference/viewer/overview).
@@ -27,18 +31,20 @@ With the `rerun-animation` ➿ package users can:
 1. Biovision Hierarchy files (`*.bvh`)
 2. Parametric Human Body parameter files (`*.npz`) from <a style="display: inline;" href="https://meshcapade.com/"><img src="https://meshcapade.com/images/meshcapade_logo_white.svg" width=120 style="display: inline;vertical-align:middle;horizontal-align:top;margin:0px 0px 5px 0px"></a> 
 
-## Documentation
+<!-- ☘️ 🌟 📣 💼 💾 👩‍💻 🎯 🥇 👑 💯 🏆 🎉 ⚡ 🔥 🐍 📌 📈 📝 🧩 📄 📖 🚀 📚 💡 🤝 🤍 💚 🧱 ⚙️ 🔗 ⭐ 📦 📰 🛠 🎁 ⏳ 🎓 👋 ✨ -->
+
+## 👩‍💻 Documentation
 
 Up-to-date [documentation](https://moverseai.github.io/rerun-animation/docs/) is available online. 
 
 
-## Installation
+## 💾 Installation
 
 ```sh
 pip install rerun-animation
 ```
 
-### Post-installation deployment
+### ⚒ Post-installation deployment
 
 ### `*.bvh` only
 ```sh
@@ -51,7 +57,7 @@ rerun-animation-deploy
 rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`
 ```
 
-## Quickstart
+## ⏩ Quickstart
 
 1. (_optional_) Select a visualization configuration
 ```sh
@@ -65,6 +71,6 @@ rerun-animation
 
 ![quick-start](https://github.com/moverseai/rerun-animation/raw/main/docs/assets/gif/rerun_animation_quick_start.gif)
 
-## Get Involved
+## 🤝 Get Involved
 
 Feedback and contributions are welcome via GitHub (issues/PR) and Discord.
