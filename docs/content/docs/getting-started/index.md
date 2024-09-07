@@ -19,7 +19,7 @@ Setup and install the `rerun-animation` package.
 
 ## Installation
 
-Install the package from PyPi using `pip`:
+{{< icon "list" >}} Install the package from PyPi using `pip`:
 
 ```bash
 pip install rerun-animation
@@ -32,11 +32,25 @@ pip install rerun-animation
     <span data-ty>Successfully installed rerun-animation</span>
 </div>
 
-The `rerun-animation` package is now almost ready for use.
+{{< icon "check" >}} The `rerun-animation` package is now installed & almost ready to use.
 
 ## Deployment
 
-While `*.bvh` files are straightforwardly available through this package after installing the plugin below, the parametric body animation files (e.g. `SMPL`/`SMPL-H`) require the deployment of their associated data files.
+{{< icon "list" >}} After installing the package, the next step is to deploy the `rerun-loader-plugin` by running:
+
+```bash
+rerun-animation-deploy
+```
+
+<div id="termynal" data-termynal data-ty-startDelay="600">
+    <span data-ty="input" data-ty-prompt="~">rerun-animation-deploy</span>    
+    <span data-ty>Installing the rerun-loader-animation plugin ...</span>
+    <span data-ty="progress"></span>
+</div>
+
+{{< icon "check" >}} Support for `*.bvh` files is straightforwardly available through this barebone deployment.
+
+{{< icon "xmark" >}} However, support for the parametric body animation files (e.g. `SMPL`/`SMPL-H`) requires the deployment of their associated data files.
 
 ### Meshcapade / MPI Body Model Data
 
@@ -44,14 +58,14 @@ While `*.bvh` files are straightforwardly available through this package after i
 **Important!** To be able to use body model files (`*.npz`) with this package, it is necessary to deploy their parameter files.
 {{< /alert >}}
 
-Download the respective body model files from:
+{{< icon "list" >}}
+Download the currently supported body model files and place them under a common folder `PATH/TO/BODY/MODELS`:
 
 - `SMPL`: https://smpl.is.tue.mpg.de/ 
 - `SMPL-H`: https://mano.is.tue.mpg.de/
 
-and place them under a common folder `PATH/TO/BODY/MODELS`.
+{{< icon "list" >}}Then, run the deployment with the `body_data_root` argument pointing to `PATH/TO/BODY/MODELS`:
 
-Then, run:
 ```bash
 rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`
 ```
@@ -66,10 +80,10 @@ rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`
     <span data-ty="progress"></span>
 </div>
 
-Apart from deploying the necessary body model files, the previous step also installs the `rerun-loader-plugin` for animation data.
+{{< icon "check" >}} The `rerun-loader-plugin` now supports custom `*.npz` files containing parametric body model parameters.
 
 {{< alert "microsoft" >}}
-**Important!** For Microsoft Windows it is necessary to install an executable with PyInstaller, which might take some time. For more details please see [rerun-sdk/external_data_loader](https://github.com/rerun-io/rerun/tree/main/examples/python/external_data_loader)
+**Important!** For Microsoft Windows it is necessary to install an executable with [PyInstaller](https://pyinstaller.org/en/stable/), which might take some time. For more details please see [rerun-sdk/external_data_loader](https://github.com/rerun-io/rerun/tree/main/examples/python/external_data_loader)
 {{< /alert >}}
 
 
