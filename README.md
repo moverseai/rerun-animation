@@ -8,6 +8,7 @@
 
 ![GitHub Release Date](https://img.shields.io/github/release-date/moverseai/rerun-animation)
 [![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ace5cb2d5105429da91010170445d4c6)](https://app.codacy.com/gh/moverseai/rerun-animation/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation/month)](https://pepy.tech/project/rerun-animation) -->
 
 
