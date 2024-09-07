@@ -1,5 +1,5 @@
 ---
-title: "rerun-animation :loop:" # :running: :runner: :running_woman: :nut_and_bolt: :moyai: :infinity: :wavy_dash: :curly_loop: :loop:
+title: ":loop: rerun-animation" # :running: :runner: :running_woman: :nut_and_bolt: :moyai: :infinity: :wavy_dash: :curly_loop: :loop:
 # https://gohugo.io/quick-reference/emojis/
 description: "A python package that offers a rerun-sdk plugin and toolset to visualize 3D animation data."
 ---
@@ -20,6 +20,8 @@ Get Started
 {{< /button >}}
 
 `rerun-animation` allows for quickly turning the installed <a style="display: inline;" href="https://www.rerun.io"><img src="https://rerun.io/logo.svg/" width=72 style="display: inline;"></a> viewer to a flexible `3D animation` viewer.
+
+![intro](https://github.com/moverseai/rerun-animation/raw/main/docs/assets/gif/rerun_animation_amass_multi.gif)
 
 <!-- TODO: Once we add more funcs
 A mini-framework
