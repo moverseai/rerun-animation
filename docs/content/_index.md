@@ -32,7 +32,7 @@ For more information, see [Why this project?]()
 -->
 
 {{< alert >}}
-**Warning!** The plugin is now in beta but its functionality is not expected to change as it depends on `rerun-sdk` plugin system changes. 
+**Warning!** The plugin is now in beta but its core functionality is not expected to change as it depends on `rerun-sdk` plugin system changes. 
 Compatibility with specific `rerun-sdk` versions might be necessary because of this. 
 Apart from integrating with `rerun-sdk` via the loader plugin, the `rerun-animation` package offers an additional configuration layer and extra tools. 
 Once these have been stabilized and most bugs have been identified and solved, we will bump `rerun-animation` to a stable release.
@@ -47,6 +47,7 @@ With the `rerun-animation` {{< icon "python" >}} package users can:
 `rerun-animation`  supports the following types of `3D animation` data:
 1. Biovision Hierarchy files (`*.bvh`)
 2. Parametric Human Body parameter files (`*.npz`) from <a style="display: inline;" href="https://meshcapade.com/"><img src="https://meshcapade.com/images/meshcapade_logo_white.svg" width=120 style="display: inline;vertical-align:middle;horizontal-align:top;margin:0px 0px 5px 0px"></a> 
+
 
 <!--
 <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
