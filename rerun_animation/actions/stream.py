@@ -1,11 +1,11 @@
-import sys
-import os
 import importlib
-from rerun_animation.util import (
-    get_package_path
-)
+import os
+import sys
 
-module_name = importlib.import_module('rerun_animation.rerun-loader-animation')
+from rerun_animation.util import get_package_path
+
+module_name = importlib.import_module("rerun_animation.rerun-loader-animation")
+
 
 def run() -> None:
     # ensure input filepaths are absolute as we will be changing the cwd
@@ -13,6 +13,7 @@ def run() -> None:
     pkg_path, is_editable, is_windows = get_package_path()
     os.chdir(pkg_path)
     module_name.main()
+
 
 if __name__ == "__main__":
     run()

@@ -1,30 +1,28 @@
-#NOTE: parts of this code are adapted from GANimator https://github.com/PeizhuoLi/ganimator
-#   based on Holden's https://theorangeduck.com/media/uploads/other_stuff/motionsynth_code.zip 
+# NOTE: parts of this code are adapted from GANimator https://github.com/PeizhuoLi/ganimator
+#   based on Holden's https://theorangeduck.com/media/uploads/other_stuff/motionsynth_code.zip
 #   and from PyTorch 3D's transforms https://github.com/facebookresearch/pytorch3d/blob/main/pytorch3d/transforms/rotation_conversions.py
 
-import numpy as np
 import re
 import typing
+
+import numpy as np
 
 __all__ = [
     "load",
     "euler_angles_to_matrix",
 ]
 
-_ROTATION_TO_ID__ = {
-    'Xrotation' : 'x',
-    'Yrotation' : 'y',
-    'Zrotation' : 'z'   
-}
+_ROTATION_TO_ID__ = {"Xrotation": "x", "Yrotation": "y", "Zrotation": "z"}
+
 
 def load(filename: str) -> typing.Tuple[
-    np.ndarray, # root position 
-    np.ndarray, # joint rotations
-    np.ndarray, # joint offsets
-    np.ndarray, # joint parents
-    typing.List[str], # joint names
-    str, # rotation order
-    float, # timestep
+    np.ndarray,  # root position
+    np.ndarray,  # joint rotations
+    np.ndarray,  # joint offsets
+    np.ndarray,  # joint parents
+    typing.List[str],  # joint names
+    str,  # rotation order
+    float,  # timestep
 ]:
     with open(filename, "r") as f:
         i = 0
@@ -35,23 +33,28 @@ def load(filename: str) -> typing.Tuple[
         offsets = np.array([]).reshape((0, 3))
         parents = np.array([], dtype=int)
         for line in f:
-            if "HIERARCHY" in line: continue
-            if "MOTION" in line: continue
-            rmatch = re.match(r"ROOT (\w+:?\w+)", line) # mixamo mod
+            if "HIERARCHY" in line:
+                continue
+            if "MOTION" in line:
+                continue
+            rmatch = re.match(r"ROOT (\w+:?\w+)", line)  # mixamo mod
             if rmatch:
                 names.append(rmatch.group(1))
                 offsets = np.append(offsets, np.array([[0, 0, 0]]), axis=0)
                 parents = np.append(parents, active)
-                active = (len(parents) - 1)
+                active = len(parents) - 1
                 continue
-            if "{" in line: continue
+            if "{" in line:
+                continue
             if "}" in line:
                 if end_site:
                     end_site = False
                 else:
                     active = parents[active]
                 continue
-            offmatch = re.match(r"\s*OFFSET\s+([\-\d\.e]+)\s+([\-\d\.e]+)\s+([\-\d\.e]+)", line)
+            offmatch = re.match(
+                r"\s*OFFSET\s+([\-\d\.e]+)\s+([\-\d\.e]+)\s+([\-\d\.e]+)", line
+            )
             if offmatch:
                 if not end_site:
                     offsets[active] = np.array([list(map(float, offmatch.groups()))])
@@ -61,18 +64,18 @@ def load(filename: str) -> typing.Tuple[
                 channels = int(chanmatch.group(1))
                 channelis = 0 if channels == 3 else 3
                 channelie = 3 if channels == 3 else 6
-                parts = line.split()[2 + channelis:2 + channelie]
+                parts = line.split()[2 + channelis : 2 + channelie]
                 if any([p not in _ROTATION_TO_ID__ for p in parts]):
                     continue
                 order = "".join([_ROTATION_TO_ID__[p] for p in parts])
                 orders.append(order)
                 continue
-            jmatch = re.match("\s*JOINT\s+(\w+:?\w+)", line) # mixamo mod
+            jmatch = re.match("\s*JOINT\s+(\w+:?\w+)", line)  # mixamo mod
             if jmatch:
                 names.append(jmatch.group(1))
                 offsets = np.append(offsets, np.array([[0, 0, 0]]), axis=0)
                 parents = np.append(parents, active)
-                active = (len(parents) - 1)
+                active = len(parents) - 1
                 continue
             if "End Site" in line:
                 end_site = True
@@ -86,11 +89,11 @@ def load(filename: str) -> typing.Tuple[
             fmatch = re.match("\s*Frame Time:\s+([\d\.]+)", line)
             if fmatch:
                 frametime = float(fmatch.group(1))
-                continue            
+                continue
             dmatch = line.strip().split()
             if dmatch:
                 data_block = np.array(list(map(float, dmatch)))
-                N = len(parents)                
+                N = len(parents)
                 if channels == 3:
                     # positions[i, 0:1] = data_block[0:3]
                     positions[i] = data_block[0:3]
@@ -109,7 +112,7 @@ def load(filename: str) -> typing.Tuple[
                 else:
                     raise Exception("Too many channels! %i" % channels)
                 i += 1
-    order = orders[0] #NOTE: assumes all in same order
+    order = orders[0]  # NOTE: assumes all in same order
     return positions, rotations, offsets, parents, names, order, frametime
 
 
@@ -142,6 +145,7 @@ def _axis_angle_rotation(axis: str, angle: np.ndarray) -> np.ndarray:
 
     return np.stack(R_flat, -1).reshape(angle.shape + (3, 3))
 
+
 def euler_angles_to_matrix(euler_angles: np.ndarray, convention: str) -> np.ndarray:
     """
     Convert rotations given as Euler angles in radians to rotation matrices.
@@ -168,4 +172,3 @@ def euler_angles_to_matrix(euler_angles: np.ndarray, convention: str) -> np.ndar
         for c, e in zip(convention, np.dsplit(euler_angles, 3))
     ]
     return np.matmul(np.matmul(matrices[0], matrices[1]), matrices[2])
-
