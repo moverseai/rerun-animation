@@ -175,9 +175,29 @@ The **default** configuration can be printed using `rerun-animation-config print
 
 ### _create_
 
+This action creates a configuration file (`*.ini`) at the path it was called on for the user to customize.
+
+```sh
+rerun-animation-config create newconfig
+INFO     A configuration file was created @ CURRENT/PATH/newconfig.ini. 
+```
+
+{{< alert "circle-info" >}}
+The newly created configuration uses the parameters from the **default** configuration.
+{{< /alert >}}
 
 ### _install_
 
+This action installs a local configuration file (`*.ini`).
 
+```sh
+rerun-animation-config install newconfig
+INFO     ⚙       Installing configuration newconfig
+INFO     🟢      Completed, the new (newconfig) configuration was installed and also selected as the current configuration.
+```
+
+{{< alert "circle-info" >}}
+The installed configuration will be available in the **list** and can be **printed** and/or **selected** for use on demand.
+{{< /alert >}}
 
 ---
