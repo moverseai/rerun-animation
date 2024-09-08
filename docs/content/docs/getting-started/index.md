@@ -52,6 +52,10 @@ rerun-animation-deploy
 
 {{< icon "xmark" >}} However, support for the parametric body animation files (e.g. `SMPL`/`SMPL-H`) requires the deployment of their associated data files.
 
+{{< alert "circle-info" >}}
+In the case that support for parametric body model files is not needed, the **missing file warnings** can be safely ignored.
+{{< /alert >}}
+
 ### Meshcapade / MPI Body Model Data
 
 {{< alert "circle-info" >}}
