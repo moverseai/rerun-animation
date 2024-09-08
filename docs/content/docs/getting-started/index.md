@@ -48,7 +48,7 @@ rerun-animation-deploy
     <span data-ty="progress"></span>
 </div>
 
-{{< icon "check" >}} Support for `*.bvh` files is straightforwardly available through this barebone deployment.
+{{< icon "check" >}} Support for `*.bvh` files is straightforwardly available through this barebone deployment. [`rerun` [transforms]({{< ref "plugin" >}}) to a `bvh-viewer`]
 
 {{< icon "xmark" >}} However, support for the parametric body animation files (e.g. `SMPL`/`SMPL-H`) requires the deployment of their associated data files.
 
@@ -89,6 +89,10 @@ rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`
 {{< alert "microsoft" >}}
 **Important!** For Microsoft Windows it is necessary to install an executable with [PyInstaller](https://pyinstaller.org/en/stable/), which might take some time. For more details please see [rerun-sdk/external_data_loader](https://github.com/rerun-io/rerun/tree/main/examples/python/external_data_loader)
 {{< /alert >}}
+
+## Next
+
+See how to select a visualization [configuration]({{< ref "config" >}}), or just [drag-n-drop]({{< ref "plugin" >}}) a file into the `rerun-viewer`.
 
 
 ---

@@ -200,4 +200,8 @@ INFO     🟢      Completed, the new (newconfig) configuration was installed an
 The installed configuration will be available in the **list** and can be **printed** and/or **selected** for use on demand.
 {{< /alert >}}
 
+## Next
+
+Once a visualization [configuration]({{< ref "config" >}}) has been selected or created, you can use the `rerun-viewer` as an [animation viewer]({{< ref "plugin" >}}).
+
 ---

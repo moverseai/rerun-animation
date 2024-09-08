@@ -166,7 +166,7 @@ cython_debug/
 .vscode/
 
 # Hugo
-/resources/
+resources/
 public/
 jsconfig.json
 node_modules/
