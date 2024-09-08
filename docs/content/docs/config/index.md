@@ -1,6 +1,6 @@
 ---
-title: "Command Line Interface"
-description: "Learn how to use the rerun-animation tools."
+title: "Configuration"
+description: "Learn how to configure the `rerun-animation` package."
 date: 2024-01-02 # used for ordering, most recent == first
 layout: simple
 
@@ -12,10 +12,9 @@ cascade:
 ---
 
 {{< lead >}}
-Learn how to use the `rerun-animation` tools.
+Learn how to use configure the `rerun-animation` package.
 {{< /lead >}}
 
-![Screenshots](screenshot.svg)
-
+<!-- ![Screenshots](feature.svg) -->
 
 ---

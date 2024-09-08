@@ -1,6 +1,6 @@
 ---
 title: "Documentation"
-description: "Learn how to use rerun-animation and its tools."
+description: "Learn how to use and configure `rerun-animation`."
 
 cascade:
   showDate: false
@@ -11,7 +11,7 @@ cascade:
 
 {{< lead >}}
 Flexible 3D animation data visualization.\
-Learn how to use `rerun-animation` and its features.
+Learn how to use and configure `rerun-animation`.
 {{< /lead >}}
 
 <!-- ![Screenshots](docs.svg) -->

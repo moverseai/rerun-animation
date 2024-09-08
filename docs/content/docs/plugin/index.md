@@ -1,6 +1,6 @@
 ---
 title: "Plugin"
-description: "Drag-n-drop interface for the rerun-sdk viewer."
+description: "Drag-n-drop interface for the `rerun-sdk` viewer."
 date: 2024-01-01 # used for ordering, most recent == first
 layout: simple
 
@@ -15,7 +15,7 @@ cascade:
 Drag-n-drop interface for the `rerun-sdk` viewer.
 {{< /lead >}}
 
-![Screenshots](screenshot.png)
+<!-- ![Screenshots](feature.svg) -->
 
 
 ---

@@ -15,10 +15,10 @@
   pageRef = "docs"
   weight = 10
 
-# [[main]]
-  # name = "Categories"
-  # pageRef = "categories"
-  # weight = 20
+[[main]]
+  name = "Tools"
+  pageRef = "tools"
+  weight = 20
 
 # [[main]]
   # name = "Tags"
