@@ -89,9 +89,43 @@ def run():
                 # defaults=Constants.CONFIGURATION_DEFAULTS,
                 interpolation=configparser.ExtendedInterpolation(),
             )
-            config.read(Constants.CURRENT_CONFIG_FILENAME)
+            if args.file_or_name:
+                log.info(args.file_or_name)
+                name, ext = os.path.splitext(args.file_or_name)
+                if ext == ".ini":
+                    filepath = os.path.abspath(args.file_or_name)
+                    log.info(filepath)
+                    if os.path.exists(filepath):
+                        config.read(filepath)
+                else:
+                    installed = glob.glob(
+                        os.path.join(configs_path, "**", "*.ini"), recursive=True
+                    )
+                    all_names = []
+                    for installed_config in installed:
+                        all_names.append(
+                            os.path.splitext(os.path.basename(installed_config))[0]
+                        )
+                    log.info(all_names)
+                    if name in set(all_names):
+                        log.info(name)
+                        config.read(
+                            os.path.join(
+                                configs_path, name.replace(".ini", "") + ".ini"
+                            )
+                        )
+            else:
+                log.info(Constants.CURRENT_CONFIG_FILENAME)
+                config.read(
+                    os.path.join(binary_path, Constants.CURRENT_CONFIG_FILENAME)
+                )
             pprint(
-                {section: dict(config[section]) for section in config}, expand_all=True
+                {
+                    section: dict(config[section])
+                    for section in config
+                    if section != "DEFAULT"
+                },
+                expand_all=True,
             )
         case "select":
             names = [

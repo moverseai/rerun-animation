@@ -31,7 +31,7 @@ With the `rerun-animation` ➿ package users can:
 1. Biovision Hierarchy files (`*.bvh`)
 2. Parametric Human Body parameter files (`*.npz`) from <a style="display: inline;" href="https://meshcapade.com/"><img src="https://meshcapade.com/images/meshcapade_logo_white.svg" width=120 style="display: inline;vertical-align:middle;horizontal-align:top;margin:0px 0px 5px 0px"></a> 
 
-<!-- ☘️ 🌟 📣 💼 💾 👩‍💻 🎯 🥇 👑 💯 🏆 🎉 ⚡ 🔥 🐍 📌 📈 📝 🧩 📄 📖 🚀 📚 💡 🤝 🤍 💚 🧱 ⚙️ 🔗 ⭐ 📦 📰 🛠 🎁 ⏳ 🎓 👋 ✨ -->
+<!-- ☘️ 🌟 📣 💼 💾 👩‍💻 🎯 🥇 👑 💯 🏆 🎉 ⚡ 🔥 🐍 📌 📈 📝 🧩 📄 📖 🚀 📚 💡 🤝 🤍 💚 🧱 ⚙️ 🔗 ⭐ 📦 📰 🛠 🎁 ⏳ 🎓 👋 ✨ 🧮 ✅ 👀 -->
 
 ## 👩‍💻 Documentation
 
