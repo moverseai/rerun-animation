@@ -15,9 +15,14 @@ __all__ = [
     "Constants",
 ]
 
+if platform.system() == "Windows":
+    _BIN_PATH_: str = "bin"
+else:
+    _BIN_PATH_: str = ""
+
 
 class Constants:
-    BINARY_DIRECTORY_NAME: str = "bin"
+    BINARY_DIRECTORY_NAME: str = _BIN_PATH_
     CURRENT_CONFIG_FILENAME: str = "rerun-animation.ini"
     DEFAULT_CONFIG_FILENAME: str = "default.ini"
     TEMPLATE_CONFIG_FILENAME: str = "template.ini"
