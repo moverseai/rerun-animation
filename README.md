@@ -5,6 +5,8 @@
 ![PyPI - Status](https://img.shields.io/pypi/status/rerun-animation)
 ![PyPI - License](https://img.shields.io/pypi/l/rerun-animation)
 ![Static Badge](https://img.shields.io/badge/docs-link-8A2BE2?style=flat&link=https%3A%2F%2Fmoverseai.github.io%2Frerun-animation%2F)
+[![Discord2](https://img.shields.io/badge/server-7289DA?logo=discord&logoColor=white&label=Discord)](https://discord.gg/bQc7B6qSPd)
+<!-- ![Discord](https://dcbadge.limes.pink/api/server/bQc7B6qSPd) -->
 
 ![GitHub Release Date](https://img.shields.io/github/release-date/moverseai/rerun-animation)
 [![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation)
@@ -44,6 +46,9 @@ Up-to-date [documentation](https://moverseai.github.io/rerun-animation/docs/) is
 pip install rerun-animation
 ```
 
+> [!WARNING]  
+> `rerun-animation` has only been tested on Windows up to now, if you use another OS please submit your [feedback](#-get-involved) in case of errors.
+
 ### ⚒ Post-installation deployment
 
 ### `*.bvh` only
@@ -71,6 +76,7 @@ rerun-animation
 
 ![quick-start](https://github.com/moverseai/rerun-animation/raw/main/docs/assets/gif/rerun_animation_quick_start.gif)
 
+
 ## 🤝 Get Involved
 
-Feedback and contributions are welcome via GitHub (issues/PR) and Discord.
+Feedback and contributions are welcome via GitHub ([issue](https://github.com/moverseai/rerun-animation/issues/new)/[PR](https://github.com/moverseai/rerun-animation/compare)) and [Discord](https://discord.gg/bQc7B6qSPd).

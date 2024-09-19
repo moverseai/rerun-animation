@@ -87,7 +87,11 @@ rerun-animation-deploy --body_data_root `PATH/TO/BODY/MODELS`
 {{< icon "check" >}} The `rerun-loader-plugin` now supports custom `*.npz` files containing parametric body model parameters.
 
 {{< alert "microsoft" >}}
-**Important!** For Microsoft Windows it is necessary to install an executable with [PyInstaller](https://pyinstaller.org/en/stable/), which might take some time. For more details please see [rerun-sdk/external_data_loader](https://github.com/rerun-io/rerun/tree/main/examples/python/external_data_loader)
+**Important!** For Microsoft **Windows** it is necessary to install an executable with [PyInstaller](https://pyinstaller.org/en/stable/), which might take some time. For more details please see [rerun-sdk/external_data_loader](https://github.com/rerun-io/rerun/tree/main/examples/python/external_data_loader)
+{{< /alert >}}
+
+{{< alert "triangle-exclamation" >}}
+**Important!** The `rerun-animation` package has not been tested on **Linux**, please submit your [feedback](https://github.com/moverseai/rerun-animation#-get-involved) if things don't work out.
 {{< /alert >}}
 
 ## Next
