@@ -34,14 +34,14 @@ def get_requirements():
 
 
 PACKAGE_NAME = "rerun-animation"
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 AUTHOR = "Moverse P.C."
 EMAIL = "info@moverse.ai"
 LICENSE = "Apache 2.0"
 URL = "https://moverseai.github.io/rerun-animation/"
 CODE_URL = "https://github.com/moverseai/rerun-animation/"
 DOCS_URL = "https://moverseai.github.io/rerun-animation/"
-DESCRIPTION = ""
+DESCRIPTION = "A rerun-sdk plugin and tools for 3D animation."
 KEYWORDS = [
     "rerun-sdk",
     "animation",

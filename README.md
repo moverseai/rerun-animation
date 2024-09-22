@@ -5,15 +5,16 @@
 ![PyPI - Status](https://img.shields.io/pypi/status/rerun-animation)
 ![PyPI - License](https://img.shields.io/pypi/l/rerun-animation)
 ![Static Badge](https://img.shields.io/badge/docs-link-8A2BE2?style=flat&link=https%3A%2F%2Fmoverseai.github.io%2Frerun-animation%2F)
-[![Discord2](https://img.shields.io/badge/server-7289DA?logo=discord&logoColor=white&label=Discord)](https://discord.gg/bQc7B6qSPd)
+[![Discord2](https://img.shields.io/badge/server-7289DA?logo=discord&logoColor=white&label=discord)](https://discord.gg/bQc7B6qSPd)
 <!-- ![Discord](https://dcbadge.limes.pink/api/server/bQc7B6qSPd) -->
+<!-- <a href="https://discord.gg/bQc7B6qSPd"><img src="https://img.shields.io/discord/WIDGET_ID?logo=discord&logoColor=violet&label=discord" alt="Active Discord Server Users" /></a> -->
 
 ![GitHub Release Date](https://img.shields.io/github/release-date/moverseai/rerun-animation)
-[![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/rerun-animation?style=plastic&logo=python&logoColor=magenta&color=magenta&link=https%3A%2F%2Fpypi.org%2Fproject%2Frerun-animation%2F)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ace5cb2d5105429da91010170445d4c6)](https://app.codacy.com/gh/moverseai/rerun-animation/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/moverseai/rerun-animation/badge)](https://www.codefactor.io/repository/github/moverseai/rerun-animation)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-
+<!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation) -->
 ___
 
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation/month)](https://pepy.tech/project/rerun-animation) -->
