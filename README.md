@@ -14,8 +14,10 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ace5cb2d5105429da91010170445d4c6)](https://app.codacy.com/gh/moverseai/rerun-animation/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/moverseai/rerun-animation/badge)](https://www.codefactor.io/repository/github/moverseai/rerun-animation)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Black Format](https://github.com/moverseai/rerun-animation/actions/workflows/black.yaml/badge.svg)](https://github.com/moverseai/rerun-animation/actions/workflows/black.yaml)
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation) -->
+
+[![Black Format](https://github.com/moverseai/rerun-animation/actions/workflows/black.yaml/badge.svg)](https://github.com/moverseai/rerun-animation/actions/workflows/black.yaml)
+[![GitHub Pages](https://github.com/moverseai/rerun-animation/actions/workflows/gh-pages.yaml/badge.svg)](https://github.com/moverseai/rerun-animation/actions/workflows/gh-pages.yaml)
 ___
 
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation/month)](https://pepy.tech/project/rerun-animation) -->
