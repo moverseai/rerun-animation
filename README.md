@@ -5,9 +5,9 @@
 ![PyPI - Status](https://img.shields.io/pypi/status/rerun-animation)
 [![PyPI - License](https://img.shields.io/pypi/l/rerun-animation)](https://github.com/moverseai/rerun-animation/blob/main/LICENSE)
 [![Static Badge](https://img.shields.io/badge/docs-link-8A2BE2?style=flat&link=https%3A%2F%2Fmoverseai.github.io%2Frerun-animation%2F)](https://moverseai.github.io/rerun-animation/)
-[![Discord2](https://img.shields.io/badge/server-7289DA?logo=discord&logoColor=white&label=discord)](https://discord.gg/bQc7B6qSPd)
-<!-- ![Discord](https://dcbadge.limes.pink/api/server/bQc7B6qSPd) -->
-<!-- <a href="https://discord.gg/bQc7B6qSPd"><img src="https://img.shields.io/discord/WIDGET_ID?logo=discord&logoColor=violet&label=discord" alt="Active Discord Server Users" /></a> -->
+[![Discord](https://dcbadge.limes.pink/api/server/bQc7B6qSPd?style=flat)](https://discord.gg/bQc7B6qSPd)
+<!-- [![Discord2](https://img.shields.io/badge/server-7289DA?logo=discord&logoColor=white&label=discord)](https://discord.gg/bQc7B6qSPd) -->
+<!-- <a href="https://discord.gg/bQc7B6qSPd"><img src="https://img.shields.io/discord/1069970354937806970?logo=discord&logoColor=violet&label=discord" alt="Active Discord Server Users"/></a> -->
 
 [![GitHub Release Date](https://img.shields.io/github/release-date/moverseai/rerun-animation)](https://github.com/moverseai/rerun-animation/releases)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/rerun-animation?style=plastic&logo=python&logoColor=magenta&color=magenta&link=https%3A%2F%2Fpypi.org%2Fproject%2Frerun-animation%2F)](https://pypi.org/project/rerun-animation/)
