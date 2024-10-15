@@ -12,8 +12,8 @@
 [![GitHub Release Date](https://img.shields.io/github/release-date/moverseai/rerun-animation)](https://github.com/moverseai/rerun-animation/releases)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/rerun-animation?style=plastic&logo=python&logoColor=magenta&color=magenta&link=https%3A%2F%2Fpypi.org%2Fproject%2Frerun-animation%2F)](https://pypi.org/project/rerun-animation/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ace5cb2d5105429da91010170445d4c6)](https://app.codacy.com/gh/moverseai/rerun-animation/dashboard)
-[![CodeFactor](https://www.codefactor.io/repository/github/moverseai/rerun-animation/badge)](https://www.codefactor.io/repository/github/moverseai/rerun-animation)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+<!-- [![CodeFactor](https://www.codefactor.io/repository/github/moverseai/rerun-animation/badge)](https://www.codefactor.io/repository/github/moverseai/rerun-animation) -->
 <!-- [![Downloads](https://static.pepy.tech/badge/rerun-animation)](https://pepy.tech/project/rerun-animation) -->
 
 [![Black Format](https://github.com/moverseai/rerun-animation/actions/workflows/black.yaml/badge.svg)](https://github.com/moverseai/rerun-animation/actions/workflows/black.yaml)
