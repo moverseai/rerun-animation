@@ -99,10 +99,8 @@ def load(filename: str) -> typing.Tuple[
                     positions[i] = data_block[0:3]
                     rotations[i, :] = data_block[3:].reshape(N, 3)
                 elif channels == 6:
-                    data_block = data_block.reshape(N, 6)
-                    # positions[i, :] = data_block[:, 0:3]
-                    positions[i] = data_block[:, 0:3]
-                    rotations[i, :] = data_block[:, 3:6]
+                    positions[i] = data_block[0:3]
+                    rotations[i, :] = data_block.reshape(N, 6)[:, 3:6]
                 elif channels == 9:
                     # positions[i, 0] = data_block[0:3]
                     positions[i] = data_block[0:3]
